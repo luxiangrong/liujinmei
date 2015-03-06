@@ -7,6 +7,72 @@ $screen-sm-min: 992px !default;
 // bower:scss
 @import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
 // endbower
+// 
+// 
+.btn-a {
+    @include button-variant(#ffffff, #f18fb9, #f18fb9);
+    border-radius: 8px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+.table-a {
+    border-bottom: 1px solid #cccccc;
+    &.table-striped {
+        > tbody {
+            > tr {
+                &:nth-of-type(odd) {
+                    background-color: #e1e4e9;
+                }
+                &:nth-of-type(even) {
+                    background-color: #fafbfd;
+                }
+            }
+        }
+    }
+    thead, tbody {
+        > tr {
+            > td, > th {
+                border: none;
+                border-right: 3px solid #ffffff;
+                border-bottom: 3px solid #ffffff;
+                @media (min-width: $screen-sm-min) {
+                    padding-left: 88px;
+                }
+            }
+            > td {
+                color: #666666;
+            }
+        }
+    }
+    thead {
+        > tr {
+            > td, > th {
+                &:last-child {
+                    border: none;
+                }
+            }
+            th {
+                background-color: #00b9e6;
+                color: #ffffff;
+                padding-top: 15px;
+                padding-bottom: 15px;
+            }
+        }
+    }
+    tbody {
+        > tr {
+            &:last-child {
+                > td, > th {
+                    border: none;
+                }
+            }
+            td {
+                padding-top: 9px;
+                padding-bottom: 9px;
+            }
+        }
+    }
+}
 /**
  * 头部导航
  */
@@ -281,6 +347,16 @@ $screen-sm-min: 992px !default;
                 }
                 width: 100%;
                 .owl-pagination {
+                    @media (min-width: $screen-sm-min) {
+                        width: $container-sm;
+                    }
+                    @media (min-width: $screen-md-min) {
+                        width: $container-md;
+                    }
+                    @media (min-width: $screen-lg-min) {
+                        width: $container-lg;
+                    }
+                    margin: 0 auto;
                     .owl-page {
                         span {
                             border-radius: 5px;
@@ -307,6 +383,9 @@ $screen-sm-min: 992px !default;
             }
             .banner-item {
                 background: url(../images/banner_bg_04.jpg) center top no-repeat;
+                @media (min-width: $screen-sm-min) {
+                    background-size: 100% 260px;
+                }
                 .container {
                     height: 100%;
                     height: 260px;
@@ -347,14 +426,14 @@ $screen-sm-min: 992px !default;
                 &.banner-item-2 {
                     .container {
                         img {
-                            margin-right: -100px; 
+                            margin-right: -100px;
                         }
                     }
                 }
                 &.banner-item-3 {
                     .container {
                         img {
-                            margin-right: -15px; 
+                            margin-right: -15px;
                         }
                     }
                 }
@@ -462,6 +541,266 @@ $screen-sm-min: 992px !default;
         @media (min-width: $screen-sm-min) {
             text-align: right;
             margin-top: 0px;
+        }
+    }
+}
+/**
+ * 整形美容内容区
+ */
+
+.zhengxing-content {
+    margin-top: 20px;
+    h1, h2, {
+        text-align: center;
+        font-size: 24px;
+        margin-top: 35px;
+        @media (min-width: $screen-sm-min) {
+            font-size: 32px;
+        }
+        font-weight: normal;
+        img {
+            margin: 0 20px;
+            vertical-align: middle;
+        }
+    }
+    h1 {
+        font-size: 32px;
+        margin-bottom: 20px;
+        margin-top: 50px;
+    }
+    .container {
+        .container-400, .container-590, .container-800 {
+            @include container-fixed;
+            @media (min-width: $screen-sm-min) {
+                width: 590px;
+            }
+            .circle {
+                width: 156px;
+                border-radius: 156px;
+                border: 3px solid #f18fb9;
+                background-color: #f5f5f5;
+                color: #808080;
+                text-align: center;
+                margin-top: 20px;
+                &.mulit_line {
+                    font-size: 0;
+                    line-height: 150px;
+                    span {
+                        font-size: 24px;
+                        display: inline-block;
+                        line-height: 1.5;
+                        vertical-align: middle;
+                    }
+                    i {
+                        width: 0;
+                        display: inline-block;
+                        vertical-align: middle;
+                        font-size: 0;
+                    }
+                }
+            }
+        }
+        .container-800 {
+            @media (min-width: $screen-sm-min) {
+                width: 800px;
+            }
+            .circle {
+                padding-left: 5px;
+                padding-right: 5px;
+                &.mulit_line {
+                    span {
+                        font-size: 18px;
+                    }
+                }
+            }
+            &.fs-24 {
+                .circle {
+                    &.mulit_line {
+                        span {
+                            font-size: 24px;
+                        }
+                    }
+                }
+            }
+        }
+        .container-400 {
+            @media (min-width: $screen-sm-min) {
+                width: 400px;
+            }
+            .circle {
+                padding-left: 5px;
+                padding-right: 5px;
+                &.mulit_line {
+                    span {
+                        font-size: 24px;
+                    }
+                }
+            }
+        }
+        .color-l {
+            color: #4098b8;
+        }
+        .color-e {
+            color: #00b050;
+        }
+        .color-a {
+            color: #ffc000;
+        }
+        .color-d {
+            color: #f80673;
+        }
+        .heading {
+            text-align: center;
+            font-size: 32px;
+            margin-top: 50px;
+            span {
+                font-size: 72px;
+            }
+            strong {
+                font-weight: normal;
+            }
+        }
+        .body {
+            color: #666666;
+            text-align: center;
+            .t1, .t2, .t3 {
+                margin: 10px 0;
+            }
+            @media (min-width: $screen-sm-min) {
+                text-align: left;
+                .table {
+                    display: table;
+                }
+                .table-cell {
+                    display: table-cell;
+                }
+                .t1 {
+                    width: 32%;
+                    font-size: 24px;
+                    padding-left: 20%;
+                    span {
+                        font-size: 32px;
+                    }
+                }
+                .t2 {
+                    width: 10%;
+                    text-align: center;
+                    font-size: 24px;
+                }
+            }
+            .t1 {
+                font-size: 24px;
+                span {
+                    font-size: 32px;
+                }
+            }
+            .t2 {
+                font-size: 24px;
+            }
+        }
+    }
+    @media (min-width: $screen-sm-min) {
+        .table-data {
+            .col-sm-8 {
+                padding-right: 0;
+            }
+            .col-sm-4 {
+                padding-left: 0;
+                .table {
+                    margin-left: -2px;
+                }
+            }
+        }
+    }
+    .thumbnail-gallery {
+        .col-xs-6 {
+            padding: 0;
+        }
+        .col-sm-6 {
+            padding: 5px;
+        }
+        .thumbnail {
+            text-decoration: none;
+            border: none;
+            .caption {
+                p {
+                    text-align: center;
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+    .step {
+        color: #ffffff;
+        font-size: 24px;
+        .col-sm-4 {
+            line-height: 60px;
+            white-space: nowrap;
+            margin-bottom: 3px;
+            padding-right: 0px;
+            background: #94c8e9 url(../images/icon_03.jpg) right center no-repeat;
+            @media (min-width: $screen-sm-min) {
+                background: #94c8e9 url(../images/icon_05.jpg) right center no-repeat;
+            }
+            @media (min-width: $screen-sm-min) {
+                &:last-child {
+                    background-image: none;
+                }
+            }
+        }
+    }
+    .yanbu {
+        text-align: center;
+        h3 {
+            font-size: 32px;
+            margin: 30px;
+        }
+        p {
+            color: #666666;
+        }
+        ul {
+            margin:0;
+            padding: 0;
+            list-style: none;
+            text-align: left;
+            li {
+                color: #666666;
+                line-height: 2;
+                margin-bottom: 25px;
+                .icon-yuandian {
+                    color: #c66497;
+                    float: left;
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+}
+.call-me {
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0px;
+        @media (min-width: $screen-sm-min) {
+            text-align: center;
+        }
+        li {
+            text-align: center;
+            font-size: 24px;
+            &.phone-num {
+                font-size: 32px;
+                color: #e58ab0;
+            }
+            p {
+                margin-top: 20px;
+                font-size: 16px;
+                color: #666666;
+            }
+            @media (min-width: $screen-sm-min) {
+                display: inline-block;
+                margin: 20px;
+                vertical-align: middle;
+            }
         }
     }
 }
