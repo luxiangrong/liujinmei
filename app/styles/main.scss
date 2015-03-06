@@ -4,6 +4,7 @@ $font-family-serif: Georgia, "Times New Roman", Times, serif !default;
 //** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
 $font-family-monospace: Menlo, Monaco, Consolas, "Courier New", monospace !default;
 $screen-sm-min: 992px !default;
+$container-md: 100% !default;
 // bower:scss
 @import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
 // endbower
@@ -334,7 +335,7 @@ $screen-sm-min: 992px !default;
             }
         }
     }
-    &.banner-zhengxing {
+    &.banner-zhengxing, &.banner-aboutus {
         .owl-carousel {
             .owl-controls {
                 bottom: 0px;
@@ -368,6 +369,7 @@ $screen-sm-min: 992px !default;
                         }
                         &.active {
                             span {
+                                opacity: 1;
                                 background-color: #ffffff;
                             }
                         }
@@ -444,6 +446,13 @@ $screen-sm-min: 992px !default;
                         }
                     }
                 }
+            }
+        }
+    }
+    &.banner-aboutus {
+        .owl-carousel {
+            .banner-item {
+                background: url(../images/banner_bg_05.jpg) center top no-repeat;
             }
         }
     }
@@ -759,7 +768,7 @@ $screen-sm-min: 992px !default;
             color: #666666;
         }
         ul {
-            margin:0;
+            margin: 0;
             padding: 0;
             list-style: none;
             text-align: left;
@@ -800,6 +809,80 @@ $screen-sm-min: 992px !default;
                 display: inline-block;
                 margin: 20px;
                 vertical-align: middle;
+            }
+        }
+    }
+}
+.yiqi-content {
+    margin: 30px 0;
+    @media (min-width: $screen-sm-min) {
+        margin-top: 70px;
+        margin-bottom: 70px;
+    }
+    .container {
+        overflow-x: hidden;
+        .col-sm-6 {
+            position: relative;
+            &:first-child {
+                padding: 0;
+            }
+            &:last-child {
+                padding: 0;
+            }
+            .thumbnail {
+                padding: 0;
+                border: none;
+                margin-bottom: 0;
+            }
+            h1, dl {
+                padding: 0 15px;
+                @media (min-width: $screen-sm-min) {
+                    padding: 0 30px;
+                }
+            }
+            h1 {
+                @media (min-width: $screen-sm-min) {
+                    margin-top: 70px;
+                    margin-bottom: 30px;
+                }
+                font-size: 32px;
+                padding: 0 15px;
+            }
+            dl {
+                dt, dd {
+                    margin-bottom: 15px;
+                    @media (min-width: $screen-sm-min) {
+                        margin-bottom: 25px;
+                    }
+                }
+                dt {
+                    color: #00b9e6;
+                    float: left;
+                    margin-right: 20px;
+                }
+                dd {
+                    color: #666666;
+                }
+            }
+            .iconfont {
+                position: absolute;
+                color: #ffffff;
+                font-size: 48px;
+                &.icon-sanjiao3, &.icon-sanjiao4 {
+                    top: 50%;
+                    margin-top: -34px;
+                    right: -10px;
+                }
+                &.icon-sanjiao2 {
+                    bottom: -22px;
+                    left: 50%;
+                    margin-left: -34px;
+                }
+            }
+            &.col-sm-push-6 {
+                .icon-sanjiao3, .icon-sanjiao4 {
+                    left: -10px;
+                }
             }
         }
     }
