@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>首页</title>
+    <title>整型美容</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="/favicon.ico">
@@ -20,7 +20,7 @@
     <!-- build:js scripts/vendor/modernizr.js -->
     <script src="bower_components/modernizr/modernizr.js"></script>
     <!-- endbuild -->
-    <link rel="stylesheet" type="text/css" href="http://at.alicdn.com/t/font_1425561021_9216073.css">
+    <link rel="stylesheet" type="text/css" href="http://at.alicdn.com/t/font_1425622190_6300137.css">
 
 </head>
 
@@ -43,9 +43,9 @@
 
             <div class="collapse navbar-collapse" id="main-menu">
                 <ul class="nav navbar-nav">
-                    <li class="active home"><a href="#">首页</a>
+                    <li class="home"><a href="#">首页</a>
                     </li>
-                    <li><a href="#">整形美容</a>
+                    <li class="active"><a href="#">整形美容</a>
                     </li>
                     <li><a href="#">激光美容</a>
                     </li>
@@ -68,38 +68,40 @@
         </div>
     </nav>
 
-    <section class="banner">
+    <section class="banner banner-zhengxing">
         <div class="owl-carousel">
             <div class="banner-item banner-item-1">
                 <div class="container">
-                    <img src="images/banner_01.png" />
+                    <img src="images/banner_04.png" />
                     <div class="description">
-                        <h3>一个疗程<span class="hidden-xs">,</span><br class="visible-xs"/>三年不老</h3>
-                        <p class="hidden-xs">长春刘金梅医疗美容整形诊所某某项目成功完成</p>
-                        <div><a class="more" href="#">查看更多</a>
-                        </div>
+                        <h3>鼻部塑美</h3>
+                        <p>假体隆鼻，注射玻尿酸隆鼻</p>
                     </div>
                 </div>
             </div>
             <div class="banner-item banner-item-2">
                 <div class="container">
-                    <img src="images/banner_02.png" />
+                    <img src="images/banner_05.png" />
                     <div class="description">
-                        <h3>一个疗程<span class="hidden-xs">,</span><br class="visible-xs"/>三年不老</h3>
-                        <p class="hidden-xs">长春刘金梅医疗美容整形诊所某某项目成功完成</p>
-                        <div><a class="more" href="#">查看更多</a>
-                        </div>
+                        <h3>面部塑美</h3>
+                        <p>微创整脸提升术，无创紧肤</p>
                     </div>
                 </div>
             </div>
             <div class="banner-item banner-item-3">
                 <div class="container">
-                    <img src="images/banner_03.png" />
+                    <img src="images/banner_06.png" />
                     <div class="description">
-                        <h3>一个疗程<span class="hidden-xs">,</span><br class="visible-xs"/>三年不老</h3>
-                        <p class="hidden-xs">长春刘金梅医疗美容整形诊所某某项目成功完成</p>
-                        <div><a class="more" href="#">查看更多</a>
-                        </div>
+                        <h3>下巴塑形</h3>
+                        <p>假体隆下巴，注射玻尿酸丰下巴</p>
+                    </div>
+                </div>
+            </div>
+            <div class="banner-item banner-item-4">
+                <div class="container">
+                    <img src="images/banner_07.png" />
+                    <div class="description">
+                        <h3>眼，心灵的窗口<br/>美丽的象征！</h3>
                     </div>
                 </div>
             </div>
@@ -177,6 +179,8 @@
     (function($) {
         $(document).ready(function() {
             $(".owl-carousel").owlCarousel({
+                navigation: true,
+                navigationText: [' <i class="iconfont icon-zuo"></i> ', ' <i class="iconfont icon-you"></i>'],
                 slideSpeed: 300,
                 paginationSpeed: 400,
                 singleItem: true
