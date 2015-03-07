@@ -74,6 +74,31 @@ $container-md: 100% !default;
         }
     }
 }
+.topmenu {
+    background-color: #f2f1f1;
+    ul {
+        margin: 0px;
+        padding: 0px;
+        float: right;
+        background-color: #00b9e6;
+        color: #ffffff;
+        list-style: none;
+        padding: 0 20px;
+        margin-right: 15px;
+        li {
+            float: left;
+            padding: 5px;
+            .iconfont {
+                font-size: 14px;
+                vertical-align: middle;
+            }
+            a {
+                color: #ffffff;
+                text-decoration: none;
+            }
+        }
+    }
+}
 /**
  * 头部导航
  */
@@ -138,6 +163,16 @@ $container-md: 100% !default;
                         }
                         &.search {
                             width: 5%;
+                            text-align: right;
+                            .iconfont {
+                                font-size: 24px;
+                            }
+                            > a {
+                                &:hover {
+                                    color: darken(#00b9e6,10%);
+                                    background-color: transparent; 
+                                }
+                            }
                         }
                         &.logo {
                             width: 22%;
@@ -335,7 +370,7 @@ $container-md: 100% !default;
             }
         }
     }
-    &.banner-zhengxing, &.banner-aboutus {
+    &.banner-zhengxing, &.banner-aboutus, &.banner-case {
         .owl-carousel {
             .owl-controls {
                 bottom: 0px;
@@ -453,6 +488,21 @@ $container-md: 100% !default;
         .owl-carousel {
             .banner-item {
                 background: url(../images/banner_bg_05.jpg) center top no-repeat;
+            }
+        }
+    }
+    &.banner-case {
+        .owl-carousel {
+            .banner-item {
+                background: url(../images/banner_bg_06.jpg) center top no-repeat;
+                .container {
+                    img {
+                        margin-right: -50px;
+                        @media (min-width: $screen-sm-min) {
+                            margin-right: 0px;
+                        }
+                    }
+                }
             }
         }
     }
@@ -1051,8 +1101,8 @@ $container-md: 100% !default;
     .info {
         margin-top: 20px;
         @media (min-width: $screen-sm-min) {
-                margin-top: 50px;
-            }
+            margin-top: 50px;
+        }
         .img-responsive {
             display: block;
             margin: 0 auto;
@@ -1062,6 +1112,76 @@ $container-md: 100% !default;
         }
         p {
             color: #666666;
+        }
+    }
+}
+.case-content {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    @media (min-width: $screen-sm-min) {
+        margin-top: 70px;
+        margin-bottom: 70px;
+    }
+    .panel {
+        &.panel-default {
+            text-align: center;
+            border: none;
+            border-radius: 0;
+            box-shadow: none;
+            .panel-heading {
+                background-color: #f18fb9;
+                color: #ffffff;
+                border: none;
+                border-radius: 0;
+                .panel-title {
+                    font-size: 24px;
+                    a {
+                        text-decoration: none;
+                        .iconfont {
+                            font-size: 24px;
+                            margin-left: 10px;
+                        }
+                    }
+                }
+            }
+            .panel-body {
+                font-size: 18px;
+                padding-left: 0;
+                padding-right: 0;
+                .nav {
+                    li {
+                        border-bottom: 1px solid #e5e5e5;
+                        a {
+                            color: #666666;
+                            &:hover, &:focus {
+                                color: #f18fb9;
+                                background-color: transparent;
+                            }
+                        }
+                        &.active {
+                            a {
+                                background-color: transparent;
+                                color: #f18fb9;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .case-list {
+        h1 {
+            text-align: center;
+            margin-top: 0px;
+            font-size: 24px;
+            margin-bottom: 20px;
+            @media (min-width: $screen-sm-min) {
+                font-size: 32px;
+            }
+        }
+        .thumbnail {
+            border: none;
+            padding: 0;
         }
     }
 }
