@@ -154,6 +154,7 @@ h2.flower-bg {
         li {
             float: left;
             padding: 5px;
+            position: relative;
             .iconfont {
                 font-size: 14px;
                 vertical-align: middle;
@@ -161,6 +162,19 @@ h2.flower-bg {
             a {
                 color: #ffffff;
                 text-decoration: none;
+            }
+            .qr-weixin-img {
+                position: absolute;
+                top: 29px;
+                z-index: 10;
+                left: 50%;
+                margin-left: -58px;
+                display: none;
+            }
+            &:hover {
+                .qr-weixin-img {
+                    display: block;
+                }
             }
         }
     }
@@ -202,6 +216,7 @@ h2.flower-bg {
                     > li {
                         width: 11%;
                         text-align: center;
+                        position: relative;
                         > a {
                             float: left;
                             padding-top: 8px;
@@ -218,7 +233,7 @@ h2.flower-bg {
                                 background-color: #f18fb9;
                             }
                         }
-                        &.active {
+                        &.active, &.hover {
                             > a {
                                 color: #ffffff;
                                 background-color: #f18fb9;
@@ -239,6 +254,16 @@ h2.flower-bg {
                                     background-color: transparent;
                                 }
                             }
+                            &.hover {
+                                a {
+                                    background-color: transparent;
+                                    color: darken(#00b9e6, 10%);
+                                    &:hover {
+                                        color: darken(#00b9e6, 10%);
+                                        background-color: transparent;
+                                    }
+                                }
+                            }
                         }
                         &.logo {
                             width: 22%;
@@ -250,6 +275,42 @@ h2.flower-bg {
                                 margin-bottom: 0;
                                 &:hover {
                                     background-color: transparent;
+                                }
+                            }
+                            &.hover {
+                                a {
+                                    background-color: transparent;
+                                    &:hover {
+                                        background-color: transparent;
+                                    }
+                                }
+                            }
+                        }
+                        &.aboutus {
+                            ul.sub-menu {
+                                margin-left: -360px;
+                            }
+                        }
+                        ul.sub-menu {
+                            position: absolute;
+                            display: none;
+                            z-index: 100;
+                            bottom: 40px;
+                            list-style: none;
+                            padding: 0;
+                            margin: 0;
+                            width: 600px;
+                            left: 50%;
+                            margin-left: -300px;
+                            li {
+                                display: inline-block;
+                                padding: 0 15px;
+                                > a {
+                                    color: #999999;
+                                    text-decoration: none;
+                                    &:hover {
+                                        color: #666666;
+                                    }
                                 }
                             }
                         }
@@ -721,6 +782,17 @@ h2.flower-bg {
                 &:hover, &:focus {
                     color: darken(#ffffff, 20%);
                 }
+            }
+        }
+        ul {
+            list-style: none;
+            position: relative;
+            padding: 0;
+            margin: 0;
+            overflow-y: hidden;
+            li {
+                position: relative;
+                transition: all 0.5s;
             }
         }
     }
