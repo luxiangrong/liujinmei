@@ -50,7 +50,7 @@ $container-md: 100% !default;
         > tr {
             > td, > th {
                 &:last-child {
-                    border: none;
+                    border-right: none;
                 }
             }
             th {
@@ -162,6 +162,7 @@ h2.flower-bg {
             a {
                 color: #ffffff;
                 text-decoration: none;
+
             }
             .qr-weixin-img {
                 position: absolute;
@@ -176,6 +177,19 @@ h2.flower-bg {
                     display: block;
                 }
             }
+            &.zixun {
+                a  {
+                    color: #ffff33;
+                }
+            }
+            .form-group {
+                margin-bottom: 0px;
+                .icon-search {
+                    color: #00b9e6;
+                    font-size: 18px;
+                }
+            }
+            
         }
     }
 }
@@ -259,8 +273,32 @@ h2.flower-bg {
                                     background-color: transparent;
                                     color: darken(#00b9e6, 10%);
                                     &:hover {
-                                        color: darken(#00b9e6, 10%);
-                                        background-color: transparent;
+                                        color: #ffffff;
+                                        background-color: #00b9e6;
+                                    }
+                                }
+                            }
+                            ul.sub-menu {
+                                width: 180px;
+                                text-align: left;
+                                margin-left: -158px;
+                                bottom: 20px;
+                                li {
+                                    padding-right: 0;
+                                    padding-left: 0;
+                                    display: block;
+                                    input {
+                                        &.form-control {
+                                            width: 100%;
+                                            box-shadow: none;
+                                            border-radius: 0;
+                                            border: none;
+                                            padding-left: 0;
+                                            padding-right: 0;
+                                            border-bottom: 1px solid #33c7eb; 
+                                            font-size: 18px;
+                                            font-weight: normal;
+                                        }
                                     }
                                 }
                             }
@@ -610,6 +648,15 @@ h2.flower-bg {
                             margin-right: -75px;
                         }
                     }
+                }
+            }
+        }
+    }
+    &.banner-zhengxing {
+        .owl-carousel {
+            .owl-controls {
+                .owl-buttons {
+                    margin-top: 70px;
                 }
             }
         }
