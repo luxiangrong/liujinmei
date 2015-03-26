@@ -231,7 +231,7 @@ h2.flower-bg {
                         width: 11%;
                         text-align: center;
                         position: relative;
-                        > a {
+                        > a, > button {
                             float: left;
                             padding-top: 8px;
                             padding-bottom: 7px;
@@ -259,17 +259,23 @@ h2.flower-bg {
                         &.search {
                             width: 5%;
                             text-align: right;
+
                             .iconfont {
                                 font-size: 24px;
                             }
-                            > a {
+                            > button {
                                 &:hover {
                                     color: darken(#00b9e6, 10%);
                                     background-color: transparent;
                                 }
+                                &.btn-link {
+                                    padding-top: 0;
+                                    padding-bottom: 0;
+                                    text-decoration: none; 
+                                }
                             }
                             &.hover {
-                                a {
+                                button {
                                     background-color: transparent;
                                     color: darken(#00b9e6, 10%);
                                     &:hover {
@@ -279,7 +285,7 @@ h2.flower-bg {
                                 }
                             }
                             ul.sub-menu {
-                                width: 180px;
+                                width: 200px;
                                 text-align: left;
                                 margin-left: -158px;
                                 bottom: 20px;
@@ -287,6 +293,8 @@ h2.flower-bg {
                                     padding-right: 0;
                                     padding-left: 0;
                                     display: block;
+                                    padding-left: 20px;
+                                    padding-right: 20px;
                                     input {
                                         &.form-control {
                                             width: 100%;
