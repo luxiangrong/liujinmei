@@ -221,6 +221,29 @@ h2.flower-bg {
                 }
             }
         }
+        .navbar-collapse {
+            ul.navbar-nav {
+                > li {
+                    background-color: #efefef;
+                    ul.sub-menu {
+                        list-style: none;
+                        padding: 0;
+                        margin: 0;
+                        padding-left: 30px;
+                        background: #eeeeee;
+                        li {
+                            > a {
+                                color: #999999;
+                                text-decoration: none;
+                                &:hover {
+                                    color: #666666;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
         @media (min-width: $screen-sm-min) {
             overflow: hidden;
             .navbar-collapse {
@@ -231,6 +254,7 @@ h2.flower-bg {
                         width: 11%;
                         text-align: center;
                         position: relative;
+                        background-color: transparent;
                         > a, > button {
                             float: left;
                             padding-top: 8px;
@@ -348,6 +372,7 @@ h2.flower-bg {
                             width: 600px;
                             left: 50%;
                             margin-left: -300px;
+                            background: transparent;
                             li {
                                 display: inline-block;
                                 padding: 0 15px;
