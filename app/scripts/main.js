@@ -1,9 +1,8 @@
 ;
 (function($) {
     $(document).ready(function() {
-    	if(Modernizr.mq('only screen and (min-width: 992px)')) {
 	        $('#main-menu:not(.in)').find('.nav > li').on('mouseenter', function() {
-	            $('.sub-menu').hide();
+	            $('#main-menu .sub-menu').hide();
 	            $(this).addClass('hover');
 	            $(this).find('.sub-menu').show();
 	        });
@@ -11,16 +10,14 @@
 	            $(this).removeClass('hover');
 	            $(this).find('.sub-menu').hide();
 	        });
-        } else {
-        	$(".sub-menu").addClass('nav nav-pills nav-stacked').hide();
-        	$('#main-menu > ul >li').on('click', function(){
+        	$("#main-menu-sp .sub-menu").addClass('nav nav-pills nav-stacked').hide();
+        	$('#main-menu-sp > ul >li').on('click', function(){
         		var isHidden = $(this).find('.sub-menu').is(':hidden');
-        		$('.sub-menu:visible').slideUp();
+        		$('#main-menu-sp .sub-menu:visible').slideUp();
         		if(isHidden) {
 					$(this).find('.sub-menu').slideDown();
 				}
         	});
-        }
 
 
         //首页新闻切换
