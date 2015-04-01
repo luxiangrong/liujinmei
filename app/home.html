@@ -33,7 +33,7 @@
                 </li>
                 <li><i class="iconfont icon-split"></i>
                 </li>
-                <li class="zixun"><a href="">在线咨询</a>
+                <li><a href="">在线咨询</a>
                 </li>
                 <li><i class="iconfont icon-split"></i>
                 </li>
@@ -43,7 +43,7 @@
             </ul>
         </div>
     </section>
-    <nav id="main-nav" class="navbar navbar-default hidden-xs">
+    <nav id="main-nav" class="navbar navbar-default">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle navbar-btn collapsed pull-left visible-xs" data-toggle="collapse" data-target="#main-menu">
@@ -117,106 +117,7 @@
                             </li>
                         </ul>
                     </li>
-                    <li class="hidden-xs search">
-                        <button class="btn btn-link" type="submit"><i class="iconfont icon-search"></i>
-                        </button>
-                        <ul class="sub-menu">
-                            <li>
-                                <div class="form-group">
-                                    <input type="text" class="form-control input-sm" placeholder="Search">
-                                </div>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-    <nav id="main-nav-sp" class="navbar navbar-default visible-xs">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle navbar-btn collapsed pull-left visible-xs" data-toggle="collapse" data-target="#main-menu-sp">
-                    <i class="iconfont icon-list"></i>
-                </button>
-                <button class="btn navbar-btn pull-right visible-xs"><i class="iconfont icon-search"></i>
-                </button>
-                <a class="center-block navbar-brand  visible-xs" href="#" style="text-align: center;"><img src="images/logo_sp.png" />
-                </a>
-            </div>
-
-            <div class="collapse navbar-collapse" id="main-menu-sp">
-                <ul class="nav navbar-nav">
-                    <li class="active home"><a href="#">首页</a>
-                    </li>
-                    <li><a href="#">整形美容</a>
-                        <ul class="sub-menu">
-                            <li><a href="#">鼻部</a>
-                            </li>
-                            <li><a href="#">面部</a>
-                            </li>
-                            <li><a href="">下巴</a>
-                            </li>
-                            <li><a href="">眼部</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li><a href="#">激光美容</a>
-                        <ul class="sub-menu">
-                            <li><a href="#">紧致提升</a>
-                            </li>
-                            <li><a href="#">光学脱毛</a>
-                            </li>
-                            <li><a href="">祛斑美白</a>
-                            </li>
-                            <li><a href="">热玛吉紧肤疗程</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li><a href="#">注射美容</a>
-                        <ul class="sub-menu">
-                            <li><a href="#">注射填充</a>
-                            </li>
-                            <li><a href="#">注射除皱</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="hidden-xs logo">
-                        <a href="#"><img src="images/logo.png">
-                        </a>
-                    </li>
-                    <li><a href="#">王牌疗程</a>
-                        <ul class="sub-menu">
-                            <li><a href="#">胶原更生疗程</a>
-                            </li>
-                            <li><a href="#">全效面部疗程</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li><a href="#">案例展示</a>
-                    </li>
-                    <li class="aboutus"><a href="#">关于我们</a>
-                        <ul class="sub-menu">
-                            <li><a href="#">尖端仪器</a>
-                            </li>
-                            <li><a href="#">联系我们</a>
-                            </li>
-                            <li><a href="">使命信念</a>
-                            </li>
-                            <li><a href="">专科医生</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="hidden-xs search">
-                        <button class="btn btn-link" type="submit"><i class="iconfont icon-search"></i>
-                        </button>
-                        <ul class="sub-menu">
-                            <li>
-                                <div class="form-group">
-                                    <input type="text" class="form-control input-sm" placeholder="Search">
-                                </div>
-                            </li>
-                        </ul>
+                    <li class="hidden-xs search"><a href="#"><i class="iconfont icon-search"></i></a>
                     </li>
                 </ul>
             </div>
@@ -286,27 +187,27 @@
             <div class="row">
                 <div class="col-sm-4">
                     <a href="#"><img class="" src="images/pic01.jpg">
+                    </a>
                     <div class="description">
                         <h4>尖端仪器</h4>
                         <p>长春刘金梅医疗美容整形诊所某某项目成功完成</p>
                     </div>
-                    </a>
                 </div>
                 <div class="col-sm-4">
                     <a href="#"><img class="" src="images/pic02.jpg">
+                    </a>
                     <div class="description">
                         <h4>胶原更生疗程</h4>
                         <p>长春刘金梅医疗美容整形诊所某某项目成功完成</p>
                     </div>
-                    </a>
                 </div>
                 <div class="col-sm-4">
                     <a href="#"><img class="" src="images/pic03.jpg">
+                    </a>
                     <div class="description">
                         <h4>服务理念</h4>
                         <p>长春刘金梅医疗美容整形诊所某某项目成功完成</p>
                     </div>
-                    </a>
                 </div>
             </div>
         </div>
@@ -341,7 +242,8 @@
             $(".owl-carousel").owlCarousel({
                 slideSpeed: 300,
                 paginationSpeed: 400,
-                singleItem: true
+                singleItem: true,
+                autoPlay: true
             });
         });
     })(jQuery);
